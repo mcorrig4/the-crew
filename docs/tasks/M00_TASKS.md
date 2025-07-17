@@ -29,9 +29,23 @@ When you launch an agent:
 
 
 
+# Tasks
+Below is a **ready‑to‑copy set of 10 story‑card prompts**—one for each task in Milestone 0.
+Paste the relevant card into the chat with the specified **system prompt** to launch an agent.
+*No additional decisions are left to the agent.*
+
+---
+
+## Milestone 0 – Detailed Task Cards
+
+> **Branch naming**
+> Use the branch given in each card. All branches fork from `feat/m00-bootstrap`.
+
+---
+
 ### **TASK 0.1 – Repository skeleton & placeholder docs**
 
-**Agent template:** `.claude/commands/agents/docs_agent.md`
+**Agent template:** `commands/docs_agent.md`
 **Branch:** `feat/m00-structure`
 
 ```
@@ -50,11 +64,21 @@ Step‑by‑step instructions
    src/pages  
    docs/prds  
    docs/tasks  
-   .claude/commands/agents  
+   commands  
    .github/workflows  
 2. In every empty directory add a `.gitkeep` file to keep it in git.  
-3. pass (already done)  
-4. pass (already done)  
+3. Add **empty** markdown files:  
+   docs/DEVELOPMENT_GUIDELINES.md  
+   docs/STYLE_GUIDE.md  
+   docs/TESTING_GUIDELINES.md  
+   docs/WORKFLOW.md  
+   docs/tasks/TEMPLATE.md  
+4. Add **empty** agent prompt files in `commands/`:  
+   logic_agent.md  
+   ui_agent.md  
+   test_agent.md  
+   docs_agent.md  
+   ci_agent.md  
 5. Stage, commit, push.  
    Commit message:  
    `chore(structure): add directory skeleton and placeholder docs`
@@ -70,7 +94,7 @@ Step‑by‑step instructions
 
 ### **TASK 0.2 – Git repo initialise, .gitignore, README stub**
 
-**Agent template:** `.claude/commands/agents/git_start.md`
+**Agent template:** `commands/logic_agent.md`
 **Branch:** `feat/m00-git`
 
 ````
@@ -111,7 +135,7 @@ Instructions
 
 ### **TASK 0.3 – Add Yarn v3 (berry) and root package.json**
 
-**Agent template:** `.claude/commands/agents/git_start.md`  
+**Agent template:** `commands/logic_agent.md`  
 **Branch:** `feat/m00-yarn`
 
 ```
@@ -156,7 +180,7 @@ Instructions
 
 ### **TASK 0.4 – Install Vite + React + TypeScript scaffold**
 
-**Agent template:** `.claude/commands/agents/git_start.md`  
+**Agent template:** `commands/logic_agent.md`  
 **Branch:** `feat/m00-vite`
 
 ```
@@ -194,7 +218,7 @@ Instructions
 
 ### **TASK 0.5 – Configure Tailwind CSS (JIT)**
 
-**Agent template:** `.claude/commands/agents/git_start.md`  
+**Agent template:** `commands/ui_agent.md`  
 **Branch:** `feat/m00-tailwind`
 
 ```
@@ -228,7 +252,7 @@ Instructions
 
 ### **TASK 0.6 – Add Storybook 8**
 
-**Agent template:** `.claude/commands/agents/git_start.md`  
+**Agent template:** `commands/ui_agent.md`  
 **Branch:** `feat/m00-storybook`
 
 ```
@@ -259,7 +283,7 @@ Instructions
 
 ### **TASK 0.7 – ESLint, Prettier, Husky + lint‑staged**
 
-**Agent template:** `.claude/commands/agents/git_start.md`  
+**Agent template:** `commands/logic_agent.md`  
 **Branch:** `feat/m00-lint`
 
 ```
@@ -292,7 +316,7 @@ Instructions
 
 ### **TASK 0.8 – Integrate Vitest**
 
-**Agent template:** `.claude/commands/agents/git_start.md`  
+**Agent template:** `commands/test_agent.md`  
 **Branch:** `feat/m00-vitest`
 
 ```
@@ -323,7 +347,7 @@ Instructions
 
 ### **TASK 0.9 – GitHub Actions CI skeleton**
 
-**Agent template:** `.claude/commands/agents/git_start.md`  
+**Agent template:** `commands/ci_agent.md`  
 **Branch:** `feat/m00-ci`
 
 ```
@@ -366,7 +390,7 @@ Instructions
 
 ### **TASK 0.10 – Conventional Commits & CHANGELOG tooling**
 
-**Agent template:** `.claude/commands/agents/git_start.md`  
+**Agent template:** `commands/docs_agent.md`  
 **Branch:** `feat/m00-changelog`
 
 ```
