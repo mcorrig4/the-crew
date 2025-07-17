@@ -1,4 +1,4 @@
-# the-crew
+# Trump: Coop Card Game
 
 This project is a personal, open-source digital version of the cooperative card game **The Crew: Mission Deep Sea**  
 
