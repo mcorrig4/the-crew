@@ -49,7 +49,6 @@ Paste the relevant card into the chat with the specified **system prompt** to la
 **Branch:** `feat/m00-structure`
 
 ```
-You are working in branch feat/m00-structure.
 
 Objective  
 ---------  
@@ -94,11 +93,10 @@ Step‑by‑step instructions
 
 ### **TASK 0.2 – Git repo initialise, .gitignore, README stub**
 
-**Agent template:** `commands/logic_agent.md`
-**Branch:** `feat/m00-git`
+**Agent template:** `.claude/commands/agents/logic_agent.md`
+**Branch:** `feat/m00-bootstrap`
 
 ````
-You are working in branch feat/m00-git.
 
 Objective  
 ---------  
@@ -125,7 +123,6 @@ Instructions
    Commit message:
    `docs(readme): add README and .gitignore`
 
-```
 
 **Acceptance criteria**  
 * `git status` is clean after commit.  
@@ -135,12 +132,11 @@ Instructions
 
 ### **TASK 0.3 – Add Yarn v3 (berry) and root package.json**
 
-**Agent template:** `commands/logic_agent.md`  
-**Branch:** `feat/m00-yarn`
+**Agent template:** `.claude/commands/agents/logic_agent.md`  
+**Branch:** `feat/m00-bootstrap`
 
 ```
 
-You are working in branch feat/m00-yarn.
 
 ## Objective
 
@@ -170,7 +166,6 @@ Instructions
    Commit message:
    `chore(tooling): enable Yarn berry and base scripts`
 
-```
 
 **Acceptance criteria**  
 * `.yarn/releases` directory exists.  
@@ -180,12 +175,11 @@ Instructions
 
 ### **TASK 0.4 – Install Vite + React + TypeScript scaffold**
 
-**Agent template:** `commands/logic_agent.md`  
-**Branch:** `feat/m00-vite`
+**Agent template:** `.claude/commands/agents/logic_agent.md`  
+**Branch:** `feat/m00-bootstrap`
 
 ```
 
-You are working in branch feat/m00-vite.
 
 ## Objective
 
@@ -218,12 +212,9 @@ Instructions
 
 ### **TASK 0.5 – Configure Tailwind CSS (JIT)**
 
-**Agent template:** `commands/ui_agent.md`  
-**Branch:** `feat/m00-tailwind`
+**Agent template:** `.claude/commands/agents/ui_agent.md`  
+**Branch:** `feat/m00-bootstrap`
 
-```
-
-You are working in branch feat/m00-tailwind.
 
 ## Objective
 
@@ -242,7 +233,6 @@ Instructions
    Commit message:
    `feat(style): integrate Tailwind CSS`
 
-```
 
 **Acceptance criteria**  
 * Browser text is teal and larger.  
@@ -252,12 +242,11 @@ Instructions
 
 ### **TASK 0.6 – Add Storybook 8**
 
-**Agent template:** `commands/ui_agent.md`  
-**Branch:** `feat/m00-storybook`
+**Agent template:** `.claude/commands/agents/ui_agent.md`  
+**Branch:** `feat/m00-bootstrap`
 
 ```
 
-You are working in branch feat/m00-storybook.
 
 ## Objective
 
@@ -283,12 +272,11 @@ Instructions
 
 ### **TASK 0.7 – ESLint, Prettier, Husky + lint‑staged**
 
-**Agent template:** `commands/logic_agent.md`  
-**Branch:** `feat/m00-lint`
+**Agent template:** `.claude/commands/agents/logic_agent.md`  
+**Branch:** `feat/m00-bootstrap`
 
 ```
 
-You are working in branch feat/m00-lint.
 
 ## Objective
 
@@ -316,12 +304,11 @@ Instructions
 
 ### **TASK 0.8 – Integrate Vitest**
 
-**Agent template:** `commands/test_agent.md`  
-**Branch:** `feat/m00-vitest`
+**Agent template:** `.claude/commands/agents/test_agent.md`  
+**Branch:** `feat/m00-bootstrap`
 
 ```
 
-You are working in branch feat/m00-vitest.
 
 ## Objective
 
@@ -347,12 +334,11 @@ Instructions
 
 ### **TASK 0.9 – GitHub Actions CI skeleton**
 
-**Agent template:** `commands/ci_agent.md`  
-**Branch:** `feat/m00-ci`
+**Agent template:** `.claude/commands/agents/ci_agent.md`  
+**Branch:** `feat/m00-bootstrap`
 
 ```
 
-You are working in branch feat/m00-ci.
 
 ## Objective
 
@@ -390,12 +376,11 @@ Instructions
 
 ### **TASK 0.10 – Conventional Commits & CHANGELOG tooling**
 
-**Agent template:** `commands/docs_agent.md`  
-**Branch:** `feat/m00-changelog`
+**Agent template:** `.claude/commands/agents/docs_agent.md`  
+**Branch:** `feat/m00-bootstrap`
 
 ```
 
-You are working in branch feat/m00-changelog.
 
 ## Objective
 
