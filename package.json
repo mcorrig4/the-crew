@@ -1,0 +1,12 @@
+{
+  "name": "crew-mission-deep-sea",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "yarn@4.9.2",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest run",
+    "lint": "eslint . --ext .ts,.tsx"
+  }
+}
