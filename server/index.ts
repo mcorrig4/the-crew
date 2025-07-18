@@ -1,6 +1,6 @@
 import { Server } from 'boardgame.io/dist/cjs/server.js';
 import type { Game, Ctx } from 'boardgame.io';
-import { INVALID_MOVE } from 'boardgame.io/core';
+import { INVALID_MOVE } from 'boardgame.io/dist/cjs/core.js';
 import type { Card, Trick, TrickRecord } from '../src/types';
 import { createDeck, dealCards } from '../src/game/deck';
 import { detectCaptain } from '../src/game/setupHelpers';

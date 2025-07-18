@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import { Hand } from './Hand';
 import type { Card } from '../types/Card';
 
@@ -31,7 +30,7 @@ const sampleHand: Card[] = [
 export const ActiveHand: Story = {
   args: {
     hand: sampleHand,
-    onPlay: action('card-played'),
+    onPlay: () => {},
     isActive: true,
   },
 };
@@ -39,7 +38,7 @@ export const ActiveHand: Story = {
 export const InactiveHand: Story = {
   args: {
     hand: sampleHand,
-    onPlay: action('card-played'),
+    onPlay: () => {},
     isActive: false,
   },
 };
