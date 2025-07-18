@@ -46,5 +46,6 @@ module.exports = {
     '.eslintrc.cjs',
     'lint-staged.config.mjs',
     'commitlint.config.cjs',
+    'server/**',
   ],
 };
