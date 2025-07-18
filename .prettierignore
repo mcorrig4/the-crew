@@ -1,0 +1,18 @@
+# Ignore markdown files in docs folder
+docs/**/*.md
+
+# Build outputs
+dist
+build
+coverage
+
+# Dependencies
+node_modules
+
+# Yarn
+.yarn/cache
+.yarn/install-state.gz
+
+# IDE
+.vscode
+.idea

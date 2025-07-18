@@ -1,0 +1,17 @@
+# Node
+dist/
+node_modules/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+*storybook.log
+storybook-static
+
+# Test coverage
+coverage/
