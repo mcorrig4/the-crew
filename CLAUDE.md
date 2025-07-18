@@ -81,4 +81,5 @@ src/
 
 - Designed to be built primarily by AI agents with minimal manual intervention
 - Use the Task tool to delegate work to sub-agents
-- Try using tools for finding and searching the codebase before resorting to using `find` and `grep` in Bash.
+- Try using tools for finding and searching the codebase before resorting to using `find` and `grep` in Bash
+- Use `act` to test github workflows locally
