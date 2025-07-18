@@ -1,5 +1,5 @@
 import { Client } from 'boardgame.io/react';
-import { CrewGame } from '../../server/index';
+import { CrewGame } from './CrewGame';
 
 export const createClient = () =>
   Client({

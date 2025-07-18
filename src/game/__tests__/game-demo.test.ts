@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { describe, it, expect } from 'vitest';
-import { CrewGame } from '../../../server';
+import { CrewGame } from '../CrewGame';
 import type { Card } from '../../types';
 
 describe('Real Game Demo - Proving Everything Works', () => {
