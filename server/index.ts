@@ -8,6 +8,7 @@ export const CrewGame: Game = {
 
 const server = Server({
   games: [CrewGame],
+  origins: ['http://localhost:5173'],
 });
 
 server.run(
