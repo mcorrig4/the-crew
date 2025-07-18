@@ -3364,6 +3364,7 @@ __metadata:
     immer: "npm:^10.1.1"
     jsdom: "npm:^26.1.0"
     lint-staged: "npm:^16.1.2"
+    node-persist: "npm:^4.0.4"
     postcss: "npm:^8.5.6"
     prettier: "npm:^3.6.2"
     react: "npm:^19.1.0"
@@ -6770,6 +6771,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"node-persist@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "node-persist@npm:4.0.4"
+  dependencies:
+    p-limit: "npm:^3.1.0"
+  checksum: 10c0/02820ba103e6e22485718bcc9594974c77c8101a201cd35336de097bd0e6c650c9c8f6fe21c5b0ce025275c014fd7b32166c692483d945af38d32fe7d66eb980
+  languageName: node
+  linkType: hard
+
 "node-releases@npm:^2.0.19":
   version: 2.0.19
   resolution: "node-releases@npm:2.0.19"
@@ -7003,7 +7013,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"p-limit@npm:^3.0.2":
+"p-limit@npm:^3.0.2, p-limit@npm:^3.1.0":
   version: 3.1.0
   resolution: "p-limit@npm:3.1.0"
   dependencies:
