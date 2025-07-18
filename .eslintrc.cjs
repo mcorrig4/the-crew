@@ -41,5 +41,10 @@ module.exports = {
       version: 'detect',
     },
   },
-  ignorePatterns: ['postcss.config.js', '.eslintrc.cjs', 'lint-staged.config.mjs'],
+  ignorePatterns: [
+    'postcss.config.js',
+    '.eslintrc.cjs',
+    'lint-staged.config.mjs',
+    'commitlint.config.cjs',
+  ],
 };
