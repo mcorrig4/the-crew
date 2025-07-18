@@ -1,6 +1,6 @@
-import { Server } from 'boardgame.io/dist/cjs/server.js';
+import { Server } from 'boardgame.io/server';
 import type { Game, Ctx } from 'boardgame.io';
-import { INVALID_MOVE } from 'boardgame.io/dist/cjs/core.js';
+import { INVALID_MOVE } from 'boardgame.io/core';
 import type { Card, Trick, TrickRecord } from '../src/types';
 import { createDeck, dealCards } from '../src/game/deck';
 import { detectCaptain } from '../src/game/setupHelpers';
@@ -45,12 +45,11 @@ function endTrick(G: GameState, ctx: Ctx): void {
 
 /**
  * Move function for playing a card from player's hand.
- * @param G Game state
- * @param ctx Game context
- * @param cardIdx Index of card in player's hand to play
  */
-function playCard(G: GameState, ctx: Ctx, cardIdx: number) {
-  const playerID = ctx.currentPlayer;
+function playCard(
+  { G, ctx, playerID }: { G: GameState; ctx: Ctx; playerID: string },
+  cardIdx: number,
+) {
   const playerHand = G.players[playerID]?.hand;
 
   if (!playerHand || cardIdx < 0 || cardIdx >= playerHand.length) {
@@ -82,10 +81,11 @@ function playCard(G: GameState, ctx: Ctx, cardIdx: number) {
 
   // Check if trick is complete
   const numPlays = Object.keys(newPlays).length;
-  const maxCardsForRound = ctx.numPlayers === 3 ? 39 : 40;
+  const numPlayers = ctx.numPlayers as number;
+  const maxCardsForRound = numPlayers === 3 ? 39 : 40;
   const remainingCards = maxCardsForRound - G.cardsPlayed;
 
-  if (numPlays === ctx.numPlayers || numPlays === remainingCards) {
+  if (numPlays === numPlayers || numPlays === remainingCards) {
     endTrick(G, ctx);
   }
 }
@@ -94,11 +94,11 @@ export const CrewGame: Game<GameState> = {
   name: 'crew',
   setup: (ctx) => {
     const deck = createDeck();
-    const hands = dealCards(ctx.numPlayers, deck);
+    const hands = dealCards(ctx.numPlayers as number, deck);
     const captain = detectCaptain(hands);
 
     const players: { [id: string]: { hand: Card[] } } = {};
-    for (let i = 0; i < ctx.numPlayers; i += 1) {
+    for (let i = 0; i < (ctx.numPlayers as number); i += 1) {
       players[i.toString()] = { hand: hands[i] };
     }
 
