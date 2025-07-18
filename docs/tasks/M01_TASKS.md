@@ -1,39 +1,3 @@
-Below are **ready‑to‑commit artefacts for Milestone 1 – “Boardgame.io Scaffold”**
-adapted to your current repo layout ( `.claude/commands/agents/…` and `docs/…` ).
-
----
-
-## 1 • Mini‑PRD (`docs/prds/M01_BGUI_SCAFFOLD.md`)
-
-```md
-# Milestone 1 – Boardgame.io Scaffold & Core UI Shell
-
-### Objective
-
-Stand up a running multiplayer skeleton: a Boardgame.io server, a Vite‑served React
-client that can connect to a single hard‑coded game room, and two stub UI components
-(`PlayerSeat`, `Card`) visible in Storybook.
-
-### Success Criteria
-
-- `yarn dev` starts **both** the Vite client (port 5173) and a Boardgame.io Node server (port 8000) via a single npm script.
-- Visiting http://localhost:5173 shows “Waiting for other players…”.
-- Storybook (`yarn storybook`) lists “UI/PlayerSeat” and “UI/Card” stories.
-- Unit test verifies the client can connect and receive initial game state.
-- No ESLint or TypeScript errors; CI passes.
-
-### Out of Scope
-
-- Real game rules or reducers beyond an empty `moves: {}` placeholder.
-- Styling beyond minimal Tailwind utility usage.
-- Persistence, tasks, or lobby screens.
-```
-
----
-
-## 2 • Detailed Task Cards (`docs/tasks/M01_TASKS.md`)
-
-````md
 # Task List – Milestone 1
 
 ---
@@ -256,5 +220,4 @@ Merge order: logic branches → UI branches → test branch → docs / CI.
 3. Review PRs, merge into `feat/m01-bootstrap`, then fast‑forward into `main` when CI passes.
 
 Happy building—ping me if anything needs tweaking!
-::contentReference[oaicite:0]{index=0}
-```
+

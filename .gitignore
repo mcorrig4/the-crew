@@ -15,3 +15,5 @@ storybook-static
 
 # Test coverage
 coverage/
+
+.claude/settings.local.json
