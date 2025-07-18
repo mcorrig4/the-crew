@@ -37,7 +37,7 @@ pages/
 * **Unit:** Vitest + jsdom.  
 * **Component:** Storybook 8 stories + @storybook/testing‑react.  
 * **End‑to‑end:** Cypress after Milestone 4.  
-* **Coverage target:** 80 % lines for `src/game`, 70 % for UI.
+* **Coverage target:** 90 % lines for `src/game`, 80 % for UI.
 
 ## 5. Commit rules  
 * Conventional commits (`feat:`, `fix:`, `test:` …).  
