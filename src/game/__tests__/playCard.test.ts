@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { CrewGame } from '../../../server';
+import { CrewGame } from '../CrewGame';
 import type { Card } from '../../types';
 
 describe('playCard integration', () => {

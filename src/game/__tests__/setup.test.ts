@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { CrewGame } from '../../../server/index';
+import { CrewGame } from '../CrewGame';
 
 describe('CrewGame setup', () => {
   it('should distribute all 40 cards for 4 players', () => {

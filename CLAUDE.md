@@ -38,7 +38,7 @@ Digital version of the cooperative card game "The Crew: Mission Deep Sea" built 
 - **Styling:** Tailwind CSS with JIT mode
 - **Testing:** Vitest (unit), Storybook (component), Cypress (E2E after Milestone 4)
 - **State Management:** boardgame.io for game logic, zustand for UI-only state
-- **Package Manager:** Yarn Berry (v3) with node-modules linker
+- **Package Manager:** Yarn Berry (v4) with node-modules linker
 
 ### Directory Structure
 
@@ -63,7 +63,7 @@ src/
 
 - ESLint with airbnb-typescript config
 - Prettier formatting on commit
-- Coverage targets: 80% for `src/game`, 70% for UI components
+- Coverage targets: 90% for `src/game`, 90% for UI components
 - All PRs must pass `yarn test` and `yarn lint`
 - Update CHANGELOG.md for releases
 
@@ -77,17 +77,9 @@ src/
 - Test files: `*.test.tsx`, Story files: `*.stories.tsx`
 - Keep JSDoc comments brief (max 4 lines)
 
-## Working with Tasks
-
-Tasks are defined in `/docs/tasks/` using the TEMPLATE.md format. Each task should:
-
-1. Be ~1-2 human hours of work
-2. Have clear acceptance criteria
-3. Target a specific feature branch
-4. Include a conventional commit message
-
 ## Important Notes
 
-- This is a personal project respecting the original game's copyright
-- Code is MIT-licensed but game IP belongs to Kosmos
 - Designed to be built primarily by AI agents with minimal manual intervention
+- Use the Task tool to delegate work to sub-agents
+- Try using tools for finding and searching the codebase before resorting to using `find` and `grep` in Bash
+- Use `act` to test github workflows locally

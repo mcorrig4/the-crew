@@ -17,5 +17,6 @@ jobs:
       - run: corepack enable
       - run: yarn install --immutable
       - run: yarn lint
-      - run: yarn server & sleep 5 && kill $! || true
       - run: yarn test
+      - run: yarn storybook:build
+        if: matrix.node-version == '20.x'

@@ -17,3 +17,4 @@ storybook-static
 coverage/
 
 .claude/settings.local.json
+act.output
