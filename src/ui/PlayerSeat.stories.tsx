@@ -29,3 +29,21 @@ export const Current: Story = {
     isCurrent: true,
   },
 };
+
+export const WithCards: Story = {
+  args: {
+    seat: 2,
+    isCurrent: false,
+    cardCount: 10,
+    isCaptain: false,
+  },
+};
+
+export const Captain: Story = {
+  args: {
+    seat: 3,
+    isCurrent: false,
+    cardCount: 10,
+    isCaptain: true,
+  },
+};
