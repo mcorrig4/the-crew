@@ -31,3 +31,12 @@
 ````
 
 Keep JSDoc brief—max 4 lines.
+
+
+## UI Components
+
+### Hand
+Displays player's hand of cards horizontally sorted by suit. Cards are clickable only when the hand is active for playing during tricks.
+
+### TrickPile  
+Shows cards that have been played this trick. Renders small rotated cards in play order with the trick leader highlighted.
