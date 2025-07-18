@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "powershell.exe -Command \"Import-Module BurntToast; New-BurntToastNotification -Text 'Claude Code Notification', '$(echo \"$PAYLOAD\" | jq -r '.message' | sed 's/`/``/g; s/\\\"/``\\\"/g')'\""
+            "command": "powershell.exe -Command \"Import-Module BurntToast; New-BurntToastNotification -Text 'Claude Code Notification', '$(cat | jq -r '.message' | sed 's/`/``/g; s/\\\\\\\"/``\\\\\\\"/g')'\""
           }
         ]
       }
@@ -17,7 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "powershell.exe -Command \"Import-Module BurntToast; New-BurntToastNotification -Text 'Claude Code', 'Claude: DONE'\""
+            "command": "powershell.exe -Command \"Import-Module BurntToast; New-BurntToastNotification -Text 'Claude Code', 'DONE'\""
           }
         ]
       }
