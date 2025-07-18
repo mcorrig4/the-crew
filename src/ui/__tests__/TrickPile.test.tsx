@@ -1,9 +1,13 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import { render, screen, cleanup } from '@testing-library/react';
+import { describe, it, expect, afterEach } from 'vitest';
 import { TrickPile } from '../TrickPile';
 
 describe('TrickPile', () => {
+  afterEach(() => {
+    cleanup();
+  });
+
   it('renders empty state when no cards are played', () => {
     render(<TrickPile plays={{}} leader="0" />);
     expect(screen.getByText('No cards played')).toBeInTheDocument();
@@ -25,21 +29,21 @@ describe('TrickPile', () => {
 
   it('renders multiple cards without leader highlight for non-leader', () => {
     const plays = {
-      '0': { suit: 'blue' as const, value: 7 },
-      '1': { suit: 'pink' as const, value: 3 },
-      '2': { suit: 'green' as const, value: 9 },
+      '0': { suit: 'blue' as const, value: 4 },
+      '1': { suit: 'pink' as const, value: 8 },
+      '2': { suit: 'green' as const, value: 6 },
     };
     render(<TrickPile plays={plays} leader="1" />);
 
     // All cards should be rendered
-    expect(screen.getByText('7')).toBeInTheDocument();
-    expect(screen.getByText('3')).toBeInTheDocument();
-    expect(screen.getByText('9')).toBeInTheDocument();
+    expect(screen.getByText('4')).toBeInTheDocument();
+    expect(screen.getByText('8')).toBeInTheDocument();
+    expect(screen.getByText('6')).toBeInTheDocument();
 
     // Only the leader card should have amber ring
-    const leaderCard = screen.getByText('3').closest('div');
-    const nonLeaderCard1 = screen.getByText('7').closest('div');
-    const nonLeaderCard2 = screen.getByText('9').closest('div');
+    const leaderCard = screen.getByText('8').closest('div');
+    const nonLeaderCard1 = screen.getByText('4').closest('div');
+    const nonLeaderCard2 = screen.getByText('6').closest('div');
 
     expect(leaderCard).toHaveClass('ring-amber-400');
     expect(nonLeaderCard1).not.toHaveClass('ring-amber-400');
