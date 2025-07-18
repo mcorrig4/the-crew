@@ -89,4 +89,32 @@ describe('Hand', () => {
 
     expect(screen.queryByRole('button')).not.toBeInTheDocument();
   });
+
+  describe('boardgame.io integration', () => {
+    it('triggers moves.playCard only when active', () => {
+      const mockPlayCard = vi.fn();
+
+      // Render with active state
+      const { rerender } = render(<Hand hand={sampleHand} onPlay={mockPlayCard} isActive />);
+
+      // Click the first card when active
+      const firstCard = screen.getAllByRole('button')[0];
+      fireEvent.click(firstCard);
+
+      expect(mockPlayCard).toHaveBeenCalledWith(1); // Original index of pink 3
+      expect(mockPlayCard).toHaveBeenCalledTimes(1);
+
+      // Reset mock
+      mockPlayCard.mockClear();
+
+      // Re-render with inactive state
+      rerender(<Hand hand={sampleHand} onPlay={mockPlayCard} isActive={false} />);
+
+      // Click the first card when inactive
+      const inactiveCard = screen.getAllByRole('button')[0];
+      fireEvent.click(inactiveCard);
+
+      expect(mockPlayCard).not.toHaveBeenCalled();
+    });
+  });
 });
